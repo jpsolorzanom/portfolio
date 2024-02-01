@@ -47,7 +47,7 @@ body {
 .banner-section article h1 {
     /* font-family: var(--fontBold); */
     text-align: left;
-    animation: animateTitle;
+    animation: fadeInBanner;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
@@ -56,7 +56,7 @@ body {
 
 .banner-section article p {
     text-align: left;
-    animation: animateTitle;
+    animation: fadeInBanner;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
@@ -99,9 +99,9 @@ body {
 }
 
 .external-links {
-    animation: animateTitle;
-    animation-duration: 500ms;
-    animation-timing-function: ease-in-out;
+    animation: fadeInBanner;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     animation-fill-mode: both;
     box-sizing: border-box;
     margin: 12px 12px 0 12px;
@@ -110,7 +110,7 @@ body {
 .external-links img {
     color: var(--vanilla);
     text-decoration: none;
-    transition: filter 200ms ease-in-out;
+    /* transition: filter 200ms ease-in-out; */
 }
 
 .external-links a:nth-child(even) {
@@ -135,12 +135,26 @@ h2 {
 }
 
 .projects-section {
+    position: relative;
     min-height: 100svh;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
     width: 90%;
     margin: 0 auto;
+}
+
+.projects-section article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projects-section article header{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .projects-section article {
@@ -151,16 +165,55 @@ h2 {
     background-color: var(--dark-green);
 }
 
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form fieldset{
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    margin: 0;
+}
+
+.contact-form fieldset legend{
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--cream);
+}
+
+.contact-form fieldset label{
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--cream);
+}
+
+.contact-form fieldset .form-item{
+    margin-top: 8px;
+}
+
+.contact-form input {
+    background-color: transparent;
+    border: none;
+    outline: 1px solid var(--cream);
+}
+
+.contact-form input:focus {
+    /* background-color: blue; */
+    box-shadow: inset 0px 0px 5px 1px var(--cream);
+}
+
 @media (prefers-reduced-motion: reduce) {
     .main-menu ul li a {
         transition: none;
     }
 }
 
-@keyframes animateTitle {
+@keyframes fadeInBanner {
     0%  {
         opacity: 0;
-        transform: translateX(50px);
     }
     25%  {
         opacity: .25;
@@ -173,7 +226,6 @@ h2 {
     }
     100%  {
         opacity: 1;
-        transform: translateX(00px);
     }
 }
 
