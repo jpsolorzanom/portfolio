@@ -141,7 +141,8 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
     width: 90%;
-    margin: 0 auto;
+    margin: auto;
+    margin-bottom: 12px;
 }
 
 .projects-section article {
@@ -167,8 +168,12 @@ h2 {
 
 .contact-form {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: start;
+}
+
+.contact-form form{
+    text-align: center;
 }
 
 .contact-form fieldset{
@@ -179,30 +184,53 @@ h2 {
 }
 
 .contact-form fieldset legend{
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 0 8px;
     color: var(--cream);
 }
 
-.contact-form fieldset label{
-    padding-left: 8px;
-    padding-right: 8px;
-    color: var(--cream);
-}
-
-.contact-form fieldset .form-item{
+.contact-form fieldset .form-item, .form-item-terms {
     margin-top: 8px;
 }
 
-.contact-form input {
-    background-color: transparent;
+.contact-form fieldset .form-item label{
+    display: none;
+    color: var(--cream);
+    width: 15%;
+}
+
+.contact-form .form-item input {
+    background-color: white;
     border: none;
     outline: 1px solid var(--cream);
+    width: 100%;
 }
+
+.contact-form .form-item select {
+    background-color: white;
+    border: none;
+    outline: 1px solid var(--cream);
+    width: 100%;
+}
+
+.contact-form .form-item-terms label {
+    color: var(--cream);
+}
+
+/* .contact-form .form-item-terms input[type='checkbox'] {
+} */
 
 .contact-form input:focus {
     /* background-color: blue; */
     box-shadow: inset 0px 0px 5px 1px var(--cream);
+}
+
+.contact-form form input[type='submit'] {
+    color: var(--vanilla);
+    font-weight: var(--fontBold);
+    width: 50%;
+    border: none;
+    outline: 1px solid var(--vanilla);
+    background-color: var(--lapis-lazuli);
 }
 
 @media (prefers-reduced-motion: reduce) {

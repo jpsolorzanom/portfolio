@@ -31,13 +31,13 @@
             <span><strong>JuanPablo DEV</strong></span>
             <ul>
                 <li>
-                    <a href="">Portfolio</a>
-                </li>
-                <li>
                     <a href="">Home</a>
                 </li>
                 <li>
-                    <a href="">Services</a>
+                    <a href="">Experience</a>
+                </li>
+                <li>
+                    <a href="">Portfolio</a>
                 </li>
                 <li>
                     <a href="">Contact</a>
@@ -155,7 +155,7 @@
                 </article>
             </details>
         </section>
-        <h2>Latest Projects</h2>
+        <h2>My Projects</h2>
         <section class="projects-section">
             <article>
                 <header>
@@ -216,40 +216,41 @@
     </main>
     <footer class="page-footer">
         <section class="contact-form">
-            <h2>Contact</h2>
-            <form action="/" method="POST">
-                <fieldset>
-                    <legend>Personal Information</legend>
-                    <div class="form-item">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" placeholder="Name" required>
-                    </div>
-                    <div class="form-item">
-                        <label> Email:
-                            <input type="email" name="lastname" id="lastname" required>
-                        </label>
-                    </div>
-                    <div class="form-item">
-                        <label>Subject
-                            <select name="why" id="why">
+            <div>
+                <h2>Consultancy</h2>
+                <form action="/" method="POST">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <div class="form-item">
+                            <label>Name: </label>
+                            <input type="text" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-item">
+                            <label> Email: </label>
+                            <input type="email" name="lastname" placeholder="Last Name" required>
+                        </div>
+                        <div class="form-item">
+                            <label>Subject: </label>
+                            <select name="subject" value="0">
+                                <option value="0">Select Subject</option>
                                 <option value="1">Work</option>
                                 <option value="2">Doubt</option>
                                 <option value="3">More info</option>
                             </select>
-                        </label>
-                    </div>
-                    <div class="form-item">
-                        <label>Terms and condition
+                        </div>
+                        <div class="form-item-terms">
+                            <label class="terms-label">Accept Terms and condition</label>
                             <input type="checkbox" id="terms" name="terms" required>
-                        </label>
-                    </div>
-                    <div>
-                </fieldset>
-                <input type="submit" value="Send">
-            </form>
-            <a href="mailto:jpsolorzanom@gmail.com">Send my email</a>
-            <a href="tel:+52 22222">Call me</a>
-            <a href="whatsapp://send?text=Hi JuanPabloDev">Whatsapp</a>
+                        </div>
+                    </fieldset>
+                    <input type="submit" value="Send">
+                </form>
+            </div>
+            <div>
+                <a href="mailto:jpsolorzanom@gmail.com">Send my email</a>
+                <a href="tel:+52 22222">Call me</a>
+                <a href="whatsapp://send?text=Hi JuanPabloDev" target="_blank">Whatsapp</a>
+            </div>
         </section>
     </footer>
 </body>
